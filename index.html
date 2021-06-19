@@ -1,40 +1,584 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Presentation</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="sl-block">
+					<div class="sl-block-content">
+						<img class="sl-block__img"
+							src="https://s3.amazonaws.com/media-p.slid.es/uploads/790759/images/4348501/1200px-HTML5_logo_and_wordmark.svg.png">
+					</div>
+					<div class="sl-block__title">
+						<h3>History API</h3>
+						<h3>
+							<span>and</span>
+						</h3>
+						<h3>Routing</h3>
+					</div>
+				</div>
+			</section>
+
+			<section>
+
+				<section>
+					<div class="sl-block__history">
+						<div class="history__title">
+							<h1>HISTORY API</h1>
+						</div>
+					</div>
+					<div class="history__text">
+						<span>
+							The History interface allows manipulation of the
+							browser session history, that is the pages visited in the tab or frame that the current page is loaded
+							in.
+						</span>
+					</div>
+					<div class="history__code" data-block-type="code">
+						<div class="code">
+							<pre class="javascript"><code> window.history;</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__examples">
+						<div class="examples__title">
+							<h1>For example</h1>
+						</div>
+						<img class="examples-content"
+							src="https://s3.amazonaws.com/media-p.slid.es/uploads/790759/images/4349943/history.png">
+						<p class="examples-text">These are the methods available to us to manipulate the browser's history.</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__traveling">
+						<h2 class="sl-block__traveling__title">Traveling through history</h2>
+
+						<div class="sl-block__traveling__content">
+							<div class="content-code">
+								<pre class="javascript"><code> window.history.back();</code></pre>
+							</div>
+							<div class="content-text">
+								<span>To move
+									backward through history</span>
+							</div>
+						</div>
+
+						<div class="sl-block__traveling__content">
+							<div class="content-code">
+								<pre class="javascript"><code>window.history.forward();</code></pre>
+							</div>
+							<div class="content-text">
+								<span>To move
+									forward through history</span>
+							</div>
+						</div>
+
+						<div class="sl-block__traveling__content">
+							<div class="content-code">
+								<pre class="javascript"><code>window.history.go(n);</code></pre>
+							</div>
+							<div class="content-text">
+								<span>Moving to a specific point in
+									history</span>
+							</div>
+						</div>
+
+						<div class="sl-block__traveling__content">
+							<div class="content-code">
+								<pre class="javascript"><code>window.history.length();</code></pre>
+							</div>
+							<div class="content-text">
+								<span>Determines the number of pages in the history
+									stack</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__modlfying">
+						<div class="modlfying__title">
+							<h2>Modefying history</h2>
+						</div>
+						<p class="modlfying__text">In HTML5 we have pushState and replaceState methods</p>
+					</div>
+					<div class="modlfying__contener">
+						<pre class="contener__code"><code>
+ window.history.pushState([stateObj], [title], [url]); </code>
+            </pre>
+					</div>
+					<div class="modlfying__contener">
+						<pre class="contener__code"><code>
+ window.history.replaceState([stateObj], [title], [url]); </code></pre>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__pushState">
+						<div class="pushState__title">
+							<h2>pushState()</h2>
+						</div>
+					</div>
+					<div class="pushState__text">
+						<p>This method create a
+							new entry in the history of the browser.</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__example" data-block-type="text">
+						<div class="example__title" style="z-index: 11; color: rgb(241, 101, 41);">
+							<h2>STATE OBJECT</h2>
+						</div>
+						<div class="example__text">
+							<p>State object includes the data we'll need if
+								the state of the web page changes</p>
+						</div>
+					</div>
+					<div class="example__code">
+						<pre class="javascript">
+              <code>window.history.state
+              {entryTime: 51591.855, endpoint: {…}, savedComponentState: null}
+              endpoint:
+              clickTrackingParams:"CD8QlDUYAiITCIGLpPiXndcCFQLgHQodhx8AYiibHDILYzQtdmlkZW9zLXVaGFVDVWdtSGJrMXJURmFmNEdHS1ExT1hmUQ=="
+              watchEndpoint:
+              startTimeSeconds: 1246
+              videoId:"k2GtDJKC6HQ"
+              __proto__: Object
+              webNavigationEndpointData:
+              url:"/watch?v=k2GtDJKC6HQ&amp;t=1246s"
+              webPageType:"WATCH"
+              __proto__: Object
+              __proto__: Object
+              entryTime:51591.855
+              savedComponentState:null</code>
+            </pre>
+					</div>
+					<div class="example__text">
+						<p>Example from YouTube</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__TITEL" style="height: auto; width: 752px; left: 105px; top: 272px;">
+						<div class="TITEL__title">
+							<h2>TITEL</h2>
+						</div>
+						<div class="sl-block-content">
+							<p>All browsers currently ignor this parameter</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__URL">
+						<div class=">URL__title">
+							<h2>URL</h2>
+						</div>
+					</div>
+					<div class="URL-content">
+						<div class="URL__code">
+							<pre class="javascript"><code>
+ window.history.pushState(null, 'title', 'mystate'); </code></pre>
+						</div>
+						<p>The new history entry's URL is given by this parameter.</p>
+					</div>
+					<div class="URL-content">
+						<div class="URL__code">
+							<pre class="javascript"><code>
+ window.history.pushState(null, 'title', '/mystate'); </code></pre>
+						</div>
+						<p>The new URL can be relative if it need</p>
+					</div>
+					<div class="URL-content">
+						<div class="URL__code">
+							<pre class="javascript"><code>
+ window.history.pushState(null, 'title', 'http://google.com/mystate'); </code></pre>
+						</div>
+						<p>The new URL must be of the same origin as the current URL.</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__ method">
+						<div class=" method__title">
+							<h2>replaceState() method</h2>
+						</div>
+						<div class=" method__text">
+							<p>history.replaceState() operates exactly like history.pushState() except that replaceState() modifies
+								the current history entry instead of creating a new one.</p>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<div class="sl-block__ROUTING">
+						<div class="ROUTING__title">
+							<h1>ROUTING</h1>
+						</div>
+						<div class="ROUTING__text" style="height: auto; width: 668px; left: 139px; top: 249px;">
+							<p> Router is one of the must-have parts of single page application.</p>
+							<p> </p>
+							<p>Router knows how to tweak the content of the address bar and notifies the rest of the system for URL
+								changes</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__methods-routing">
+						<div class="methods-routing__title">
+							<h1>Methods of routing</h1>
+						</div>
+						<div class="methods-routing__content">
+							<ul>
+								<li style="text-align:left">Hash-based routing</li>
+								<li style="text-align:left">Routing with pushState</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__Hash-based-routing">
+						<div class="Hash-based-routing__title">
+							<h2>Hash-based routing</h2>
+						</div>
+						<div class="Hash-based-routing__text">
+							<p>What we meant by hash-based routing is using the anchor part of the URL
+								to simulate different content</p>
+						</div>
+						<div class="Hash-based-routing__link">
+							<p>http://yoursite.com/#content</p>
+						</div>
+						<div class="Hash-based-routing__text">
+							<p>The routing is possible because changes in the hash don’t trigger page
+								reload.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__Reading-the-route">
+						<div class="Reading-the-route__title">
+							<h2>Reading the route</h2>
+						</div>
+						<div class="Reading-the-route__text">
+							<p>To read the anchor bit from the URL we may use the following code</p>
+						</div>
+						<div class="Reading-the-route__link">
+							<p>http://yoursite.com/#content </p>
+						</div>
+						<div class="Reading-the-route__code">
+							<pre class="javascript">
+                <code>var hash = window.location.hash.slice(1);
+// or extracting the hash from the entire URL
+var hash = window.location.href.split('#')[1] || '';
+                </code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__Changing-the-path">
+						<div class="Changing-the-path__text">
+							<h2>Changing the path</h2>
+						</div>
+						<div class="Changing-the-path__text">
+							<p>To read the anchor bit from the URL we may use
+								the following code</p>
+						</div>
+						<div class="Changing-the-path__code">
+							<pre class="javascript">
+                <code>var navigate = function (path) {
+  var current = window.location.href;
+  window.location.href = current.replace(/#(.*)$/, '') + '#' + path;
+}
+navigate('rolling-scopes');</code></pre>
+						</div>
+						<div class="Changing-the-path__link">
+							<p>http://yoursite.com/#rolling-scopes</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__DEMO">
+						<div class="DEMO__title">
+							<h2>DEMO</h2>
+						</div>
+						<iframe class="DEMO__content"
+							sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock"
+							data-src="https://gudvinga.github.io/simple_app/"></iframe>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__CODE-of-DEMO">
+						<div class="CODE-of-DEMO__titile">
+							<h2>CODE of DEMO</h2>
+						</div>
+						<div class="CODE-of-DEMO__content">
+							<div class="content__code">
+								<pre class="javascript">
+              <code>var routes, router, contentEl, locationEl;
+
+contentEl = document.getElementById('content');
+locationEl = document.getElementById('locationHref');
+
+routes = {
+    '/': {
+        title: 'Simple Application', 
+        content: '&lt;p&gt;Welcome to the Simple Application&lt;p&gt;'
+    }, 
+
+    boolean: {
+        title: "Boolean",
+        content: `&lt;h2&gt;Boolean&lt;/h2&gt;&lt;p&gt;In computer science,
+                 a boolean is a logical data type that can have only the values
+                   true or false. For example, in JavaScript, boolean conditionals
+                   are often used to decide which sections of code to execute (such as in if statements)
+                   or repeat (such as in for loops).&lt;/p&gt;`
+    },
+
+    //and other ...
+}
+
+router = function() {
+    let path = window.location.hash.slice(1) || '/',
+        curentRoute = routes[path];
+
+    document.title = curentRoute.title;
+    contentEl.innerHTML = curentRoute.content || 'Error 404';
+    locationEl.innerHTML = window.location.href;
+}
+
+window.addEventListener('hashchange', router);
+window.addEventListener('load', router);</code></pre>
+							</div>
+							<div class="content__code">
+								<pre class="xml"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Simple Application&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;link href="css/style.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;main&gt;
+            &lt;hr&gt;
+            &lt;div id="locationHref"&gt;&lt;/div&gt;
+            &lt;hr&gt;
+            &lt;h1&gt;JavaScript data types and data structures&lt;/h1&gt;
+            &lt;nav id="navigation"&gt;
+                &lt;ul class="navigate"&gt;
+                    &lt;li&gt;&lt;a href="#boolean"&gt;Boolean&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#null"&gt;null&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#undefined"&gt;undefined&lt;/a&gt;&lt;/li&gt;               
+                    &lt;li&gt;&lt;a href="#number"&gt;number&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#string"&gt;string&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#symbol"&gt;symbol&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#object"&gt;object&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;div id="content" class="content-el"&gt;
+
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;script src="js/app.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__routing-revolution">
+						<div class="routing-revolution__title">
+							<h2>A routing revolution with pushState</h2>
+						</div>
+						<div class="routing-revolution__content">
+							<p>Now we do not need to use a #. We use a pushState() method to manipulate the
+								history of the browser.</p>
+							<div class="content__code">
+								<pre class="javascript"><code>var stateObj = { foo: "bar" };
+    history.pushState(stateObj, "page 2", "bar.html");</code></pre>
+							</div>
+							<p>To use this method for routing we need to make redirect from each route to
+								index.html in our server.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__DEMO">
+						<div class="DEMO__title">
+							<h2>DEMO</h2>
+						</div>
+						<iframe class="DEMO__content"
+							sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock"
+							data-src="https://gudvinga.github.io/simple_app_pushstate"></iframe>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block__CODE-of-DEMO">
+						<div class="CODE-of-DEMO__titile">
+							<h2>CODE of DEMO</h2>
+						</div>
+						<div class="CODE-of-DEMO__content">
+							<div class="content__code">
+								<pre class="javascript">
+                  <code>var routes, router, contentEl, locationEl;
+
+                    contentEl = document.getElementById('content');
+                    locationEl = document.getElementById('locationHref');
+                    
+                    routes = {
+                        '/': {
+                            title: 'Simple Application', 
+                            content: '&lt;p&gt;Welcome to the Simple Application&lt;p&gt;'
+                        }, 
+                    
+                        boolean: {
+                            title: "Boolean",
+                            content: `&lt;h2&gt;Boolean&lt;/h2&gt;&lt;p&gt;In 
+                            computer science,a boolean is a logical data type
+                            that can have only the values true or false.
+                            For example, in JavaScript, boolean conditionals are
+                            often used to decide which sections of code
+                            to execute (such as in if statements) or repeat 
+                            such as in for loops).&lt;/p&gt;`
+                        },
+                    
+                        //and other ...
+                    }
+                    
+                    var updateState = function(e) {
+                        var state;
+                    
+                        if (e.target.tagName != 'A') return;
+                    
+                        e.preventDefault();
+                        state = {
+                            page: e.target.getAttribute('href')
+                        };
+                        history.pushState(state, '', state.page);
+                        router(state);
+                    }
+                    
+                    router = function(state) {
+                        state.page = state.page || '/';
+                        var curentRoute = routes[state.page];
+                    
+                        document.title = curentRoute.title;
+                        contentEl.innerHTML = curentRoute.content || 'Error 404. Page not found';
+                        locationEl.innerHTML = window.location.href;
+                    }
+                    
+                    menu.addEventListener('click', updateState);
+                    window.addEventListener('load', router);
+                    window.addEventListener('popstate', router);</code></pre>
+							</div>
+							<div class="content__code">
+								<pre class="xml"><code>&lt;!DOCTYPE html&gt;
+                  &lt;html lang="en"&gt;
+                      &lt;head&gt;
+                          &lt;title&gt;Simple Application&lt;/title&gt;
+                          &lt;meta charset="UTF-8"&gt;
+                          &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                          &lt;link href="css/style.css" rel="stylesheet"&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+                          &lt;main&gt;
+                              &lt;hr&gt;
+                              &lt;div id="locationHref"&gt;&lt;/div&gt;
+                              &lt;hr&gt;
+                              &lt;h1&gt;JavaScript data types and data structures&lt;/h1&gt;
+                              &lt;nav id="navigation"&gt;
+                                  &lt;ul class="navigate"&gt;
+                                      &lt;li&gt;&lt;a href="boolean"&gt;Boolean&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="null"&gt;null&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="undefined"&gt;undefined&lt;/a&gt;&lt;/li&gt;               
+                                      &lt;li&gt;&lt;a href="number"&gt;number&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="string"&gt;string&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="symbol"&gt;symbol&lt;/a&gt;&lt;/li&gt;
+                                      &lt;li&gt;&lt;a href="object"&gt;object&lt;/a&gt;&lt;/li&gt;
+                                  &lt;/ul&gt;
+                              &lt;/nav&gt;
+                              &lt;div id="content" class="content-el"&gt;
+                  
+                              &lt;/div&gt;
+                          &lt;/main&gt;
+                      &lt;script src="js/app.js"&gt;&lt;/script&gt;
+                      &lt;/body&gt;
+                  &lt;/html&gt;</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="sl-block">
+						<p>As a summary I would like to say that with HTML 5 history API our
+							application to look &amp; act like proper, server-rendered sites as much as possible, especially with
+							minimal effort.</p>
+					</div>
+				</section>
+
+			</section>
+
+			<section>
+				<div class="sl-block">
+					<h2>THE END</h2>
+				</div>
+			</section>
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	</div>
+	</div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>

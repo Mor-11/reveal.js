@@ -1,0 +1,276 @@
+html {
+  background-color: rgb(0, 0, 0);
+}
+
+h1 {
+  color: rgb(241, 101, 41);
+  font-size: 45px;
+}
+h2 {
+  color: rgb(241, 101, 41);
+  font-size: 40px;
+}
+/* ////////////////////////////////////// */
+.sl-block {
+  margin: auto;
+}
+.sl-block-content {
+  transition-duration: 0.6s;
+  transition-delay: 0.5s;
+}
+.sl-block__img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.sl-block-content__text {
+  z-index: 11;
+  color: rgb(255, 255, 255);
+  line-height: 0.884;
+  transition-duration: 0.6s;
+  transition-delay: 0.6s;
+}
+.sl-block-content__text span {
+  font-size: 0.7em;
+}
+/* ////////////////////////////////////// */
+
+.sl-block__history {
+  margin: auto;
+  height: auto;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.history__text {
+  height: auto;
+  margin: auto;
+  width: 750px;
+  text-align: left;
+}
+.history__code {
+  margin: auto;
+  min-width: 30px;
+  min-height: 30px;
+  width: 500px;
+  height: 56px;
+}
+.code {
+  z-index: 13;
+  font-size: 200%;
+  border-width: 1px;
+  border-color: rgb(255, 153, 0);
+}
+
+/* ////////////////////////////////////// */
+
+.sl-block__examples {
+  height: auto;
+  width: 600px;
+  margin: auto;
+}
+.examples-content {
+  width: 632px;
+  height: 208px;
+}
+.examples-text {
+  z-index: 12;
+  color: rgb(255, 255, 255);
+  font-size: 84%;
+}
+/* ////////////////////////////////////// */
+
+.sl-block__traveling {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+
+.sl-block__traveling__content {
+  min-width: 30px;
+  min-height: 30px;
+  width: 500px;
+  margin: auto;
+}
+.content-code {
+  font-size: 100%;
+  border-width: 1px;
+  border-color: rgb(255, 153, 0);
+}
+.content-text span {
+  font-size: 20px;
+}
+/* ////////////////////////////////////// */
+.sl-block__modlfying {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+
+.modlfying__title {
+  text-align: center;
+}
+.modlfying__contener {
+  min-width: 30px;
+  min-height: 30px;
+  width: 900px;
+  margin: auto;
+}
+/* ////////////////////////////////////// */
+.sl-block__pushState {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+
+.pushState__text {
+  height: auto;
+  min-width: 30px;
+  min-height: 30px;
+  width: 600px;
+  margin: auto;
+}
+/* ////////////////////////////////////// */
+.sl-block__example {
+  height: auto;
+  width: 850px;
+  left: 104px;
+  top: 70px;
+  margin: auto;
+}
+
+.example__text p {
+  font-size: 35px;
+}
+.example__code {
+  margin: auto;
+  min-width: 30px;
+  min-height: 30px;
+  width: 900px;
+  height: 318px;
+  font-size: 30px;
+}
+/* ////////////////////////////////////// */
+.sl-block__TITEL {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+
+/* //////////////////////////////////////// */
+.sl-block__URL {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+.URL-content {
+  width: 922px;
+  margin: auto;
+  font-size: 35px;
+}
+/* //////////////////////////////////////// */
+
+.sl-block__method {
+  height: auto;
+  width: 900px;
+  margin: auto;
+}
+
+/*////////////////////////// */
+
+.sl-block__ROUTING {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+
+.ROUTING__text {
+  height: auto;
+  width: 668px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ///////////////////// */
+
+.sl-block__methods-routing {
+  height: auto;
+  margin: auto;
+}
+.methods-routing__content {
+  text-align: center;
+  line-height: 1.521;
+  font-size: 100%;
+}
+
+/* ///////////////////// */
+
+.sl-block__Hash-based-routing {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+.Hash-based-routing__link {
+  color: aqua;
+}
+
+/* ///////////////////// */
+
+.sl-block__Reading-the-route {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+.Reading-the-route__code {
+  min-width: 30px;
+  min-height: 30px;
+  width: 800px;
+}
+.Reading-the-route__link {
+  color: aqua;
+}
+
+/* ///////////////////// */
+
+.sl-block__Changing-the-path {
+  height: auto;
+  width: 752px;
+  margin: auto;
+}
+.Changing-the-path__link {
+  color: aqua;
+}
+/* ////////////////// //////////// */
+
+.sl-block__DEMO {
+  margin: auto;
+}
+.DEMO__content {
+  height: 400px;
+  width: 1000px;
+}
+/* /////////////////////////////// */
+.sl-block__CODE-of-DEMO {
+  margin: auto;
+}
+.CODE-of-DEMO__content {
+  display: flex;
+  font-size: 20px;
+}
+.content__code {
+  width: 450px;
+  height: auto;
+}
+/*//////////////////////////////// */
+.sl-block__routing-revolution {
+  margin: auto;
+}
+.content__code {
+  width: auto;
+  height: auto;
+}
+/* ///////////////////////////////// */
+.sl-block {
+  width: 1000px;
+  color: rgb(241, 101, 41);
+  margin: auto;
+}
